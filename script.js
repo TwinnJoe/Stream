@@ -1,3 +1,5 @@
+const API_URL = "https://stream-5j8w.onrender.com";
+
 // Header scroll effect
 window.addEventListener("scroll", function () {
   const header = document.getElementById("main-header");
@@ -300,7 +302,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   const password = document.getElementById("login-password").value.trim();
 
   try {
-    const response = await fetch("http://localhost:3000/api/users/login", {
+    const response = await fetch(`${API_URL}/api/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -346,7 +348,7 @@ document
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/users/register", {
+      const response = await fetch(`${API_URL}/api/users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
@@ -372,10 +374,10 @@ document
     }
   });
 
-const baseImagePath = "http://localhost:3000/images/";
+const baseImagePath = `${API_URL}/images/`;
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:3000/api/media")
+  fetch(`${API_URL}/api/media`)
     .then((res) => res.json())
     .then((data) => {
       const moviesGrid = document.querySelector("#movies .content-grid");
