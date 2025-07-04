@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/stream-icon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Header -->
+    <header id="main-header">
+        <a href="#" class="logo">STREAM</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="btn btn-outline" id="login-btn">Sign In</a>
+            <a href="#" class="btn btn-primary" id="register-btn">Register</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Unlimited Movies, TV Shows, and More.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p>Ready to watch? Create your membership to start streaming.</p>
+            <a href="#login-modal" class="btn btn-primary btn-lg" id="get-started-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section id="movies">
+        <h2 class="section-title">Popular Movies</h2>
+        <div class="content-grid"></div>
+    </section>
+
+    <!-- Series Section -->
+    <section id="series">
+        <h2 class="section-title">Popular Series</h2>
+        <div class="content-grid"></div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="download-text">
+            <h2 class="section-title">Download Your Shows to Watch Offline</h2>
+            <p>Save your favorites easily and always have something to watch later. Available free.</p>
+            <ul style="margin-top: 20px; list-style-position: inside;">
+                <li style="margin-bottom: 10px;">Download movies and episodes</li>
+                <li style="margin-bottom: 10px;">Watch on the go</li>
+                <li style="margin-bottom: 10px;">No internet connection needed</li>
+            </ul>
+        </div>
+        <!-- Dynamic download container -->
+        <div class="downloaded-content" id="downloads-container" style="margin-top: 40px;">
+            <div class="download-cards"></div>
+            <div class="download-image"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is Stream?</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Stream is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+                    documentaries, and more on thousands of internet-connected devices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How much does Stream cost?</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Watch Stream on your smartphone, tablet, Smart TV, laptop, or streaming device, all for free
+                    No costs or contracts.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Where can I watch?</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Watch anywhere, anytime. Sign in with your Stream account to watch instantly on the web at
+                    Stream.com from your personal computer or on any internet-connected device that offers the
+                    Stream website, including smart TVs, smartphones and tablets.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I cancel?</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Stream is flexible. There are no pesky contracts and no commitments. You can easily cancel your
+                    account online in two clicks. There are no cancellation fees - start or stop your account anytime.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What can I watch on Stream?</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+                    Stream originals, and more. Watch as much as you want, anytime you want.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+            <a href="#">Account</a>
+            <a href="#">Media Center</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Jobs</a>
+            <a href="#">Ways to Watch</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Speed Test</a>
+            <a href="#">Legal Notices</a>
+            <a href="#">Only on Stream</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="copyright">© 2025 Stream. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom Alert Modal -->
+    <div class="modal" id="auth-alert-modal" style="display:none;">
+        <div class="modal-content" style="max-width: 400px; padding: 20px; text-align: center;">
+            <span class="close-alert"
+                style="cursor:pointer; font-size: 24px; position: absolute; top: 10px; right: 15px;">&times;</span>
+            <h3 id="alert-title" style="margin-bottom: 15px;">Hey there, Binger</h3>
+            <p class="alert-message">You must be logged in to download content.</p>
+            <button id="alert-ok-btn" class="btn btn-primary" style="margin-top: 20px; padding: 10px 20px;">OK</button>
+        </div>
+    </div>
+
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sign In</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" autocomplete="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="current-password" autocomplete="current-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+            </form>
+            <p style="margin-top: 20px; text-align: center;">New to Stream? <a href="#" id="switch-to-register"
+                    style="color: var(--primary);">Sign up now</a>.</p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" name="username" autocomplete="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="new-password"
+          autocomplete="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password"
+          autocomplete="new-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+            </form>
+            <p style="margin-top: 20px; text-align: center;">Already have an account? <a href="#" id="switch-to-login"
+                    style="color: var(--primary);">Sign in</a>.</p>
+        </div>
+    </div>
+
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#series">Series</a></li>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#download">Download</a></li>
+            <li class="mobile-auth">
+                <a href="#" class="btn btn-outline" id="mobile-login-btn">Sign In</a>
+                <a href="#" class="btn btn-primary" id="mobile-register-btn">Register</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>

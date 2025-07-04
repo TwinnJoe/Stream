@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background circle -->
+    <circle cx="32" cy="32" r="30" fill="hsl(240, 73%, 59%)"/>
+    
+    <!-- Play button triangle -->
+    <path d="M26 22L42 32L26 42V22Z" fill="white"/>
+</svg>
