@@ -49,6 +49,7 @@ window.pendingDownload = null;
 // Update UI for logged in users
 function updateAuthUI() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const searchBarContainer = document.getElementById("search-bar-container");
 
   if (isLoggedIn) {
     loginBtn.textContent = "Sign Out";
@@ -66,7 +67,10 @@ function updateAuthUI() {
     if (mobileLoginBtn) {
       mobileLoginBtn.textContent = "Sign In";
     }
-  }
+  } 
+if (searchBarContainer) {
+  searchBarContainer.style.display = isLoggedIn ? "block" : "none";
+}
 }
 
 let alertContext = null;
@@ -380,6 +384,13 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(`${API_URL}/api/media`)
     .then((res) => res.json())
     .then((data) => {
+allMediaItems = data; // Store for search use
+      renderMediaCards(data); // Reuse rendering logic
+    })
+    .catch((err) => console.error("Failed to load media:", err));
+});
+
+      function renderMediaCards(data) {
       const moviesGrid = document.querySelector("#movies .content-grid");
       const seriesGrid = document.querySelector("#series .content-grid");
 
@@ -421,11 +432,18 @@ document.addEventListener("DOMContentLoaded", () => {
           seriesGrid.appendChild(card);
         }
       });
-    })
-    .catch((err) => {
-      console.error("Failed to load media:", err);
-    });
+    }
+
+document.getElementById("search-input").addEventListener("input", function (e) {
+  const query = e.target.value.trim().toLowerCase();
+
+  const filtered = allMediaItems.filter((item) =>
+    item.title.toLowerCase().includes(query)
+  );
+
+  renderMediaCards(filtered);
 });
+
 
 function saveToDownloads(item) {
   if (localStorage.getItem("isLoggedIn") !== "true") {
