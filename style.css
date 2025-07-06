@@ -129,10 +129,7 @@ header.scrolled {
   color: var(--foreground);
 }
 
-#search-bar-container {
-  margin-left: 20px;
-}
-
+/* Base styles shared by both search bars */
 .search-wrapper {
   position: relative;
   display: inline-block;
@@ -147,12 +144,23 @@ header.scrolled {
   pointer-events: none;
 }
 
-#search-input {
-  padding: 8px 12px 8px 32px; /* extra left padding for icon */
+.search-wrapper input {
+  padding: 8px 12px 8px 32px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
   max-width: 250px;
+}
+
+/* Desktop - shown only on large screens */
+#search-bar-desktop {
+  margin-left: 20px;
+  display: block;
+}
+
+/* Mobile search bar - hidden by default */
+#search-bar-mobile {
+  display: none;
 }
 
 
