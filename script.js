@@ -298,8 +298,8 @@ window.addEventListener("click", (e) => {
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const username = document.getElementById("login-username").value.trim();
-  const password = document.getElementById("login-password").value.trim();
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
 
   try {
     const response = await fetch(`${API_URL}/api/users/login`, {
@@ -339,7 +339,7 @@ document
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document
-      .getElementById("register-confirm-password")
+      .getElementById("confirm-password")
       .value.trim();
 
     if (password !== confirmPassword) {
