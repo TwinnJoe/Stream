@@ -29,7 +29,7 @@
         </ul>
       </nav>
       <!-- Search Bar for Desktops -->
-      <div id="search-bar-container" style="display: none">
+      <div id="search-bar-desktop" style="display: none">
         <div class="search-wrapper">
           <i class="fas fa-search"></i>
           <input
@@ -48,13 +48,13 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Search Bar for tablet and mobile -->
-    <div id="search-bar-container">
-      <div class="search-wrapper">
-        <i class="fas fa-search"></i>
-        <input type="text" id="search-input-mobile" placeholder="Search..." />
+      <!-- Search Bar for tablet and mobile -->
+      <div id="search-bar-mobile">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input-mobile" placeholder="Search..." />
+        </div>
       </div>
-    </div>
       <div class="hero-content">
         <h1>Unlimited Movies, TV Shows, and More.</h1>
         <p>Watch anywhere. Cancel anytime.</p>
@@ -71,13 +71,27 @@
     <!-- Movies Section -->
     <section id="movies">
       <h2 class="section-title">Popular Movies</h2>
-      <div class="content-grid"></div>
+      <div class="content-grid">
+        <p
+          id="no-results-movies"
+          style="display: none; text-align: center; margin-top: 20px"
+        >
+          Movie not Available.
+        </p>
+      </div>
     </section>
 
     <!-- Series Section -->
     <section id="series">
       <h2 class="section-title">Popular Series</h2>
-      <div class="content-grid"></div>
+      <div class="content-grid">
+        <p
+          id="no-results-series"
+          style="display: none; text-align: center; margin-top: 20px"
+        >
+          Series not Available.
+        </p>
+      </div>
     </section>
 
     <!-- Download Section -->

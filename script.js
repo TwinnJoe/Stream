@@ -49,7 +49,7 @@ window.pendingDownload = null;
 // Update UI for logged in users
 function updateAuthUI() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-  const searchBarContainer = document.getElementById("search-bar-container");
+  const searchBarContainer = document.getElementById("search-bar-desktop");
 
   if (isLoggedIn) {
     loginBtn.textContent = "Sign Out";
@@ -69,7 +69,8 @@ function updateAuthUI() {
     }
   } 
 if (searchBarContainer) {
-  searchBarContainer.style.display = isLoggedIn ? "block" : "none";
+  const isDesktop = window.innerWidth >= 1024; // Only show for desktops
+  searchBarContainer.style.display = isLoggedIn && isDesktop ? "flex" : "none";
 }
 }
 
@@ -384,7 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(`${API_URL}/api/media`)
     .then((res) => res.json())
     .then((data) => {
-allMediaItems = data; // Store for search use
+     allMediaItems = data; // Store for search use
       renderMediaCards(data); // Reuse rendering logic
     })
     .catch((err) => console.error("Failed to load media:", err));
@@ -393,9 +394,14 @@ allMediaItems = data; // Store for search use
       function renderMediaCards(data) {
       const moviesGrid = document.querySelector("#movies .content-grid");
       const seriesGrid = document.querySelector("#series .content-grid");
+      const noResultsMoviesMsg = document.getElementById("no-results-movies");
+const noResultsSeriesMsg = document.getElementById("no-results-series");
 
       moviesGrid.innerHTML = "";
       seriesGrid.innerHTML = "";
+
+      let hasMovies = false;
+  let hasSeries = false;
 
       data.forEach((item) => {
         const card = document.createElement("div");
@@ -428,20 +434,36 @@ allMediaItems = data; // Store for search use
 
         if (item.type === "movie") {
           moviesGrid.appendChild(card);
+          hasMovies = true;
         } else if (item.type === "series") {
           seriesGrid.appendChild(card);
+          hasSeries = true;
         }
       });
+      
+      noResultsMoviesMsg.style.display = hasMovies ? "none" : "block";
+  noResultsSeriesMsg.style.display = hasSeries ? "none" : "block";
     }
 
-document.getElementById("search-input").addEventListener("input", function (e) {
-  const query = e.target.value.trim().toLowerCase();
+function setupSearchBar(inputId) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
 
-  const filtered = allMediaItems.filter((item) =>
-    item.title.toLowerCase().includes(query)
-  );
+  input.addEventListener("input", function (e) {
+    const query = e.target.value.trim().toLowerCase();
 
-  renderMediaCards(filtered);
+    const filtered = allMediaItems.filter((item) =>
+      item.title.toLowerCase().includes(query)
+    );
+
+    renderMediaCards(filtered);
+  });
+}
+
+// Run on load
+window.addEventListener("DOMContentLoaded", () => {
+  setupSearchBar("search-bar-desktop");
+  setupSearchBar("search-bar-mobile");
 });
 
 
