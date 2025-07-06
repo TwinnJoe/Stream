@@ -133,13 +133,28 @@ header.scrolled {
   margin-left: 20px;
 }
 
+.search-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search-wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
 #search-input {
-  padding: 8px 12px;
+  padding: 8px 12px 8px 32px; /* extra left padding for icon */
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
   max-width: 250px;
 }
+
 
 /* Mobile Menu Toggle (Burger Icon) */
 .mobile-menu-toggle {
@@ -988,6 +1003,35 @@ footer {
     padding-right: 70px;
   }
 
+    #search-bar-container {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .search-wrapper {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .search-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1rem;
+  }
+
+  #search-input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 12px 8px 32px;
+    font-size: 1rem;
+  }
+
+
   .auth-buttons {
     display: none;
   }
@@ -1075,6 +1119,17 @@ footer {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
+
+    #search-bar-container {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  #search-input {
+    font-size: 0.95rem;
+    padding: 8px 12px 8px 32px;
+  }
+
 
   .hero {
     padding: 0 20px;
@@ -1174,6 +1229,17 @@ footer {
 
 /* Very small devices (under 360px) */
 @media (max-width: 360px) {
+
+    #search-input {
+    font-size: 0.9rem;
+    padding: 8px 10px 8px 30px;
+  }
+
+  .search-wrapper i {
+    font-size: 0.9rem;
+    left: 8px;
+  }
+
   .hero h1 {
     font-size: 1.5rem;
   }
