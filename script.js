@@ -50,6 +50,8 @@ window.pendingDownload = null;
 function updateAuthUI() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const searchBarContainer = document.getElementById("search-bar-desktop");
+  const mobileSearchBarContainer = document.getElementById("search-bar-mobile");
+
 
   if (isLoggedIn) {
     loginBtn.textContent = "Sign Out";
@@ -67,11 +69,18 @@ function updateAuthUI() {
     if (mobileLoginBtn) {
       mobileLoginBtn.textContent = "Sign In";
     }
-  } 
-if (searchBarContainer) {
-  const isDesktop = window.innerWidth >= 1024; // Only show for desktops
-  searchBarContainer.style.display = isLoggedIn && isDesktop ? "flex" : "none";
-}
+  }
+  // Desktop Search Bar visibility
+  if (searchBarContainer) {
+    const isDesktop = window.innerWidth >= 1024; // Only show for desktops
+    searchBarContainer.style.display = isLoggedIn && isDesktop ? "flex" : "none";
+  }
+
+  // Mobile Search Bar visibility
+  if (mobileSearchBarContainer) {
+    const isMobile = window.innerWidth < 1024;
+    mobileSearchBarContainer.style.display = isLoggedIn && isMobile ? "block" : "none";
+  }
 }
 
 let alertContext = null;
@@ -385,45 +394,44 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(`${API_URL}/api/media`)
     .then((res) => res.json())
     .then((data) => {
-     allMediaItems = data; // Store for search use
+      allMediaItems = data; // Store for search use
       renderMediaCards(data); // Reuse rendering logic
     })
     .catch((err) => console.error("Failed to load media:", err));
 });
 
-      function renderMediaCards(data) {
-      const moviesGrid = document.querySelector("#movies .content-grid");
-      const seriesGrid = document.querySelector("#series .content-grid");
-      const noResultsMoviesMsg = document.getElementById("no-results-movies");
-const noResultsSeriesMsg = document.getElementById("no-results-series");
+function renderMediaCards(data) {
+  const moviesGrid = document.querySelector("#movies .content-grid");
+  const seriesGrid = document.querySelector("#series .content-grid");
+  const noResultsMoviesMsg = document.getElementById("no-results-movies");
+  const noResultsSeriesMsg = document.getElementById("no-results-series");
 
-      moviesGrid.innerHTML = "";
-      seriesGrid.innerHTML = "";
+  moviesGrid.innerHTML = "";
+  seriesGrid.innerHTML = "";
 
-      let hasMovies = false;
+  let hasMovies = false;
   let hasSeries = false;
 
-      data.forEach((item) => {
-        const card = document.createElement("div");
-        card.className = "content-card";
+  data.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "content-card";
 
-        let durationOrSeasons = item.duration;
-        if (item.type === "series" && item.seasons) {
-          durationOrSeasons =
-            item.seasons + " Season" + (item.seasons > 1 ? "s" : "");
-        }
+    let durationOrSeasons = item.duration;
+    if (item.type === "series" && item.seasons) {
+      durationOrSeasons =
+        item.seasons + " Season" + (item.seasons > 1 ? "s" : "");
+    }
 
-        card.innerHTML = `
+    card.innerHTML = `
           <img src="${baseImagePath}${item.image_url}" alt="${item.title}">
           <div class="card-info">
             <h3>${item.title}</h3>
-            <p>${item.release_year} • ${item.category} • ${
-          durationOrSeasons || ""
-        }</p>
+            <p>${item.release_year} • ${item.category} • ${durationOrSeasons || ""
+      }</p>
             <div class="card-actions">
               <a href="#" onclick='saveToDownloads(${JSON.stringify(
-                item
-              )}); return false;' class="btn-download">
+        item
+      )}); return false;' class="btn-download">
                 <i class="fas fa-download"></i> Download
               </a>
               <span class="quality-badge">HD</span>
@@ -432,18 +440,18 @@ const noResultsSeriesMsg = document.getElementById("no-results-series");
           <div class="card-badge">1080p</div>
         `;
 
-        if (item.type === "movie") {
-          moviesGrid.appendChild(card);
-          hasMovies = true;
-        } else if (item.type === "series") {
-          seriesGrid.appendChild(card);
-          hasSeries = true;
-        }
-      });
-      
-      noResultsMoviesMsg.style.display = hasMovies ? "none" : "block";
-  noResultsSeriesMsg.style.display = hasSeries ? "none" : "block";
+    if (item.type === "movie") {
+      moviesGrid.appendChild(card);
+      hasMovies = true;
+    } else if (item.type === "series") {
+      seriesGrid.appendChild(card);
+      hasSeries = true;
     }
+  });
+
+  noResultsMoviesMsg.style.display = hasMovies ? "none" : "block";
+  noResultsSeriesMsg.style.display = hasSeries ? "none" : "block";
+}
 
 function setupSearchBar(inputId) {
   const input = document.getElementById(inputId);
