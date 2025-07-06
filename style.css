@@ -1011,35 +1011,26 @@ footer {
     padding-right: 70px;
   }
 
-    #search-bar-container {
-    margin-left: 0;
-    margin-top: 20px;
-    text-align: center;
+  #search-bar-desktop {
+    display: none;
   }
 
-  .search-wrapper {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .search-wrapper i {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-    font-size: 1rem;
-  }
-
-  #search-input {
+  #search-bar-mobile {
+    display: block;
     width: 100%;
-    max-width: 100%;
-    padding: 8px 12px 8px 32px;
-    font-size: 1rem;
+    padding: 20px;
   }
 
+  #search-bar-mobile .search-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
 
+  #search-bar-mobile .search-wrapper input {
+    width: 100%;
+    max-width: 500px;
+  }
   .auth-buttons {
     display: none;
   }
@@ -1127,17 +1118,6 @@ footer {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-
-    #search-bar-container {
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  #search-input {
-    font-size: 0.95rem;
-    padding: 8px 12px 8px 32px;
-  }
-
 
   .hero {
     padding: 0 20px;
