@@ -349,11 +349,11 @@ document
   .addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const username = document.getElementById("register-username").value.trim();
+    const email = document.getElementById("register-email").value.trim();
+    const password = document.getElementById("register-password").value.trim();
     const confirmPassword = document
-      .getElementById("confirm-password")
+      .getElementById("register-confirm-password")
       .value.trim();
 
     if (password !== confirmPassword) {
