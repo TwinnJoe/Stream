@@ -193,7 +193,7 @@ loginBtn.addEventListener("click", (e) => {
   // If user is logged in (button says "Sign Out"), log them out
   if (localStorage.getItem("isLoggedIn") === "true") {
     localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("userEmail");
+    localStorage.removeItem("username ");
     localStorage.removeItem("token");
     updateAuthUI();
     showAuthAlert("Logged out successfully.");
@@ -212,7 +212,7 @@ mobileLoginBtn.addEventListener("click", function (e) {
   // If user is logged in (button says "Sign Out"), log them out
   if (localStorage.getItem("isLoggedIn") === "true") {
     localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("userEmail");
+    localStorage.removeItem("username ");
     localStorage.removeItem("token");
     updateAuthUI();
     showAuthAlert("Logged out successfully.");
