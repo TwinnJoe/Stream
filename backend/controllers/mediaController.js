@@ -3,7 +3,14 @@ import * as Media from '../models/mediaModel.js';
 export const listMedia = async (req, res) => {
   try {
     const media = await Media.getAllMedia();
-    res.json(media);
+    
+    // Add the /images prefix to each image_url for proper static serving
+    const mediaWithFullPaths = media.map(item => ({
+      ...item,
+      image_url: item.image_url ? `/images/${item.image_url}` : null
+    }));
+    
+    res.json(mediaWithFullPaths);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
