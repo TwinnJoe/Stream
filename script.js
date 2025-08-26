@@ -1,4 +1,4 @@
-const API_URL = "https://stream-muelwa.fly.dev/api";
+const API_URL = "https://stream-muelwa.fly.dev/api/";
 
 // Header scroll effect
 window.addEventListener("scroll", function () {
