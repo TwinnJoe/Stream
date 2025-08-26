@@ -388,7 +388,7 @@ document
     }
   });
 
-const baseImagePath = `${API_URL}/images/`;
+const baseImagePath = `${API_URL}`;
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch(`${API_URL}media`)
