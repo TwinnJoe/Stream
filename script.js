@@ -388,7 +388,7 @@ document
     }
   });
 
-const baseImagePath = '/images/';
+const baseImagePath = 'https://stream-muelwa.fly.dev/images/';
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch(`${API_URL}media`)
