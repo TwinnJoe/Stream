@@ -1,0 +1,100 @@
+[2m2025-08-26T10:19:17Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-08-26T10:19:17Z[0m runner[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]Machine started in 1.123s
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025/08/26 10:19:18 INFO SSH listening listen_address=[fdaa:28:bdef:a7b:1d0:f1e9:7daf:2]:22
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]> backend@1.0.0 start
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]> nodemon app.js
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] 3.1.9[39m
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] to restart at any time, enter `rs`[39m
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching path(s): *.*[39m
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[2m2025-08-26T10:19:18Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m[nodemon] starting `node app.js`[39m
+[2m2025-08-26T10:19:19Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]Server is running at http://localhost:3000
+[2m2025-08-26T10:23:27Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]TypeError: Cannot read properties of undefined (reading 'split')
+[2m2025-08-26T10:23:27Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]    at registerUserCon (file:///app/controllers/usersController.js:24:25)
+[2m2025-08-26T10:23:42Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]TypeError: Cannot read properties of undefined (reading 'split')
+[2m2025-08-26T10:23:42Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]    at registerUserCon (file:///app/controllers/usersController.js:24:25)
+[2m2025-08-26T10:24:29Z[0m proxy[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]App primefit has excess capacity, autostopping machine 48ed047c13dd08. 1 out of 2 machines left running (region=jnb, process group=app)
+[2m2025-08-26T10:24:29Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGINT to main child process w/ PID 631
+[2m2025-08-26T10:24:34Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]TypeError: Cannot read properties of undefined (reading 'split')
+[2m2025-08-26T10:24:34Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]    at registerUserCon (file:///app/controllers/usersController.js:24:25)
+[2m2025-08-26T10:24:34Z[0m proxy[48ed047c13dd08] [32mjnb[0m [[31merror[0m][PM11] machine was recently stopped and is unavailable to service request
+[2m2025-08-26T10:24:34Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGTERM to main child process w/ PID 631
+[2m2025-08-26T10:24:35Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Main child exited with signal (with signal 'SIGTERM', core dumped? false)
+[2m2025-08-26T10:24:35Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-08-26T10:24:35Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m WARN[0m could not unmount /rootfs: EINVAL: Invalid argument
+[2m2025-08-26T10:24:35Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][  318.346409] reboot: Restarting system
+[2m2025-08-26T10:27:10Z[0m proxy[784e196a497738] [32mjnb[0m [[34minfo[0m]App primefit has excess capacity, autostopping machine 784e196a497738. 0 out of 1 machines left running (region=jnb, process group=app)
+[2m2025-08-26T10:27:10Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGINT to main child process w/ PID 629
+[2m2025-08-26T10:27:15Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGTERM to main child process w/ PID 629
+[2m2025-08-26T10:27:15Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Main child exited with signal (with signal 'SIGTERM', core dumped? false)
+[2m2025-08-26T10:27:15Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-08-26T10:27:15Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][33m WARN[0m could not unmount /rootfs: EINVAL: Invalid argument
+[2m2025-08-26T10:27:15Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][  547.622769] reboot: Restarting system
+[2m2025-08-26T10:28:57Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025-08-26T10:28:57.456976658 [01K3JY4Y3MKGB5PEVS8M8V14FG:main] Running Firecracker v1.12.1
+[2m2025-08-26T10:28:57Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025-08-26T10:28:57.457117161 [01K3JY4Y3MKGB5PEVS8M8V14FG:main] Listening on API socket ("/fc.sock").
+[2m2025-08-26T10:28:57Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025-08-26T10:28:57.456976658 [01K3JY4Y3MKGB5PEVS8M8V14FG:main] Running Firecracker v1.12.1
+[2m2025-08-26T10:28:57Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025-08-26T10:28:57.457117161 [01K3JY4Y3MKGB5PEVS8M8V14FG:main] Listening on API socket ("/fc.sock").
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 34faef9)...
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh npm run start` as root
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-08-26T10:28:58Z[0m runner[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]Machine started in 1.077s
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025/08/26 10:28:58 INFO SSH listening listen_address=[fdaa:28:bdef:a7b:1d0:f1e9:7daf:2]:22
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 34faef9)...
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh npm run start` as root
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-08-26T10:28:58Z[0m runner[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]Machine started in 1.077s
+[2m2025-08-26T10:28:58Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]2025/08/26 10:28:58 INFO SSH listening listen_address=[fdaa:28:bdef:a7b:1d0:f1e9:7daf:2]:22
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]> backend@1.0.0 start
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]> nodemon app.js
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] 3.1.9[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] to restart at any time, enter `rs`[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching path(s): *.*[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m[nodemon] starting `node app.js`[39m
+[2m2025-08-26T10:28:59Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]2025-08-26T10:28:59.107452347 [01K3JY4Y40PF9NXNDR3R1GDHNQ:main] Running Firecracker v1.12.1
+[2m2025-08-26T10:28:59Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]2025-08-26T10:28:59.107591720 [01K3JY4Y40PF9NXNDR3R1GDHNQ:main] Listening on API socket ("/fc.sock").
+[2m2025-08-26T10:28:59Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 34faef9)...
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]Server is running at http://localhost:3000
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]> backend@1.0.0 start
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]> nodemon app.js
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] 3.1.9[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] to restart at any time, enter `rs`[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching path(s): *.*[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[2m2025-08-26T10:28:59Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m[nodemon] starting `node app.js`[39m
+[2m2025-08-26T10:29:00Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh npm run start` as root
+[2m2025-08-26T10:29:00Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-08-26T10:29:00Z[0m runner[784e196a497738] [32mjnb[0m [[34minfo[0m]Machine started in 1.105s
+[2m2025-08-26T10:29:00Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]2025/08/26 10:29:00 INFO SSH listening listen_address=[fdaa:28:bdef:a7b:1cf:31a3:d0bf:2]:22
+[2m2025-08-26T10:29:00Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]> backend@1.0.0 start
+[2m2025-08-26T10:29:00Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]> nodemon app.js
+[2m2025-08-26T10:29:01Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][33m[nodemon] 3.1.9[39m
+[2m2025-08-26T10:29:01Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][33m[nodemon] to restart at any time, enter `rs`[39m
+[2m2025-08-26T10:29:01Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching path(s): *.*[39m
+[2m2025-08-26T10:29:01Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[2m2025-08-26T10:29:01Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m[nodemon] starting `node app.js`[39m
+[2m2025-08-26T10:29:01Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]Server is running at http://localhost:3000
+[2m2025-08-26T10:36:30Z[0m proxy[48ed047c13dd08] [32mjnb[0m [[34minfo[0m]App primefit has excess capacity, autostopping machine 48ed047c13dd08. 1 out of 2 machines left running (region=jnb, process group=app)
+[2m2025-08-26T10:36:30Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGINT to main child process w/ PID 630
+[2m2025-08-26T10:36:35Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGTERM to main child process w/ PID 630
+[2m2025-08-26T10:36:36Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Main child exited with signal (with signal 'SIGTERM', core dumped? false)
+[2m2025-08-26T10:36:36Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-08-26T10:36:36Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][33m WARN[0m could not unmount /rootfs: EINVAL: Invalid argument
+[2m2025-08-26T10:36:36Z[0m app[48ed047c13dd08] [32mjnb[0m [[34minfo[0m][  458.494198] reboot: Restarting system
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]Error: Duplicate entry 'sinovuyojoe@gmail.com' for key 'users.email'
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]    at PromisePool.query (/app/node_modules/mysql2/lib/promise/pool.js:36:22)
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]    at addUser (file:///app/models/usersModel.js:9:14)
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]    at registerUserCon (file:///app/controllers/usersController.js:24:11) {
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]  code: 'ER_DUP_ENTRY',
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]  errno: 1062,
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]  sql: "INSERT INTO users (name, email, password, address, age, gender, phone) VALUES ('sinovuyojoe', 'sinovuyojoe@gmail.com', '$2b$10$deEM8L4/6.EbWNbBCe2wROfQYOX1ZlPl7kMZ2qyKpNu3pIxkIt0ne', NULL, NULL, NULL, NULL)",
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]  sqlState: '23000',
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]  sqlMessage: "Duplicate entry 'sinovuyojoe@gmail.com' for key 'users.email'"
+[2m2025-08-26T10:37:48Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m]}
+[2m2025-08-26T10:42:10Z[0m proxy[784e196a497738] [32mjnb[0m [[34minfo[0m]App primefit has excess capacity, autostopping machine 784e196a497738. 0 out of 1 machines left running (region=jnb, process group=app)
+[2m2025-08-26T10:42:10Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGINT to main child process w/ PID 630
+[2m2025-08-26T10:42:15Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Sending signal SIGTERM to main child process w/ PID 630
+[2m2025-08-26T10:42:16Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Main child exited with signal (with signal 'SIGTERM', core dumped? false)
+[2m2025-08-26T10:42:16Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-08-26T10:42:16Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][33m WARN[0m could not unmount /rootfs: EINVAL: Invalid argument
+[2m2025-08-26T10:42:16Z[0m app[784e196a497738] [32mjnb[0m [[34minfo[0m][  796.911861] reboot: Restarting system
