@@ -316,7 +316,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   const password = document.getElementById("password").value.trim();
 
   try {
-    const response = await fetch(`${API_URL}/api/users/login`, {
+    const response = await fetch(`${API_URL}users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -362,7 +362,7 @@ document
     }
 
     try {
-      const response = await fetch(`${API_URL}/api/users/register`, {
+      const response = await fetch(`${API_URL}users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
@@ -391,7 +391,7 @@ document
 const baseImagePath = `${API_URL}/images/`;
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(`${API_URL}/api/media`)
+  fetch(`${API_URL}media`)
     .then((res) => res.json())
     .then((data) => {
       allMediaItems = data; // Store for search use
