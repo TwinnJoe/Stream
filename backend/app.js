@@ -28,7 +28,7 @@ app.options("*", cors({
 
 app.use(bodyParser.json());
 app.use(express.json());
-app.use('/images',express.static('public/images'));
+app.use('/images',express.static('public'));
 
 app.use('/api/users', usersRouter);
 app.use('/api/media', mediaRouter);
