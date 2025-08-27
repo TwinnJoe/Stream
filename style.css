@@ -308,7 +308,7 @@ nav ul li a:hover {
 .hero {
   height: 100vh;
   min-height: 800px;
-  background: var(--gradient-hero), url("https://stream-muelwa.fly.dev/images/background-photo.jpg") no-repeat center center/cover;
+  background: var(--gradient-hero), url("backend/public/images/background-photo.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -625,9 +625,7 @@ section {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: var(--gradient-hero),
-    url("backend/public/images/Download on devices.jpg") no-repeat center
-      center/cover;
+  background: var(--gradient-hero), url("backend/public/images/Download on devices.jpg") no-repeat center center/cover;
 }
 
 /* Add the dim overlay */
